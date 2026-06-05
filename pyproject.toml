@@ -35,6 +35,14 @@ ifeval = [
   "nltk>=3.9.2",
   "immutabledict>=4.2.2",
 ]
+ifbench = [
+  "nltk>=3.9.2",
+  "emoji>=2.12.0",
+  "syllapy>=0.7.2",
+]
+longbench_v2 = [
+  "transformers>=4.44.0",
+]
 math = ["math-verify>=0.8.0"]
 t-eval = ["numpy<=2.2", "sentence-transformers>=5.1.2"]
 

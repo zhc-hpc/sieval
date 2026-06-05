@@ -88,6 +88,26 @@
       "license": "CC-BY-4.0"
     },
     {
+      "name": "gsm8k",
+      "display_name": "GSM8K",
+      "description": "Grade School Math 8K — grade-school math word problems (test=1319).",
+      "source": [
+        "hf:openai/gsm8k"
+      ],
+      "categories": [
+        {
+          "level1": "Mathematics",
+          "level2": "ElementaryMath"
+        }
+      ],
+      "tags": [
+        "english",
+        "open-ended"
+      ],
+      "deps_group": null,
+      "license": "MIT"
+    },
+    {
       "name": "human_eval",
       "display_name": "HumanEval",
       "description": "OpenAI HumanEval — 164 Python function-synthesis problems.",
@@ -107,6 +127,26 @@
       ],
       "deps_group": null,
       "license": "MIT"
+    },
+    {
+      "name": "ifbench",
+      "display_name": "IFBench",
+      "description": "IFBench — 300 prompts with 58 new out-of-domain verifiable constraints.",
+      "source": [
+        "hf:allenai/IFBench_test"
+      ],
+      "categories": [
+        {
+          "level1": "Language",
+          "level2": "InstructionFollowing"
+        }
+      ],
+      "tags": [
+        "english",
+        "open-ended"
+      ],
+      "deps_group": null,
+      "license": "Apache-2.0"
     },
     {
       "name": "ifeval",
@@ -148,6 +188,27 @@
       ],
       "deps_group": null,
       "license": "cc"
+    },
+    {
+      "name": "longbench_v2",
+      "display_name": "LongBench v2",
+      "description": "LongBench v2 — 503 long-context multiple-choice questions (8k–2M words).",
+      "source": [
+        "hf:zai-org/LongBench-v2"
+      ],
+      "categories": [
+        {
+          "level1": "Knowledge",
+          "level2": "Multi-domain"
+        }
+      ],
+      "tags": [
+        "english",
+        "multiple-choice",
+        "long-context"
+      ],
+      "deps_group": null,
+      "license": "Apache-2.0"
     },
     {
       "name": "math_500",
@@ -208,6 +269,26 @@
       ],
       "deps_group": null,
       "license": "MIT"
+    },
+    {
+      "name": "openbookqa",
+      "display_name": "OpenBookQA",
+      "description": "OpenBookQA — elementary-science MCQ (main config, closed-book, 4 options).",
+      "source": [
+        "hf:allenai/openbookqa"
+      ],
+      "categories": [
+        {
+          "level1": "Knowledge",
+          "level2": "STEM"
+        }
+      ],
+      "tags": [
+        "english",
+        "multiple-choice"
+      ],
+      "deps_group": null,
+      "license": "Apache-2.0"
     },
     {
       "name": "t_eval_before_calling",
@@ -314,6 +395,26 @@
       "status": "stable"
     },
     {
+      "name": "gsm8k_8shot_gen",
+      "display_name": "GSM8K (8-shot CoT, generative)",
+      "description": "Grade School Math 8K, 8-shot CoT; protocol aligned to lm-eval gsm8k_cot.",
+      "dataset": "gsm8k",
+      "eval_mode": "gen",
+      "n_shot": 8,
+      "tags": [
+        "english",
+        "math"
+      ],
+      "deps_group": null,
+      "model_type": "chat",
+      "reference_impl": {
+        "source": "lm-evaluation-harness",
+        "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/b733598568fde3afa0e008892f8e7bb18cd472b6/lm_eval/tasks/gsm8k/gsm8k-cot.yaml",
+        "notes": "8-shot CoT exemplars + Q:/A: prompt, strict + flexible regex extraction, and exact_match scoring vendored verbatim from lm-eval gsm8k_cot."
+      },
+      "status": "stable"
+    },
+    {
       "name": "human_eval_0shot_gen",
       "display_name": "HumanEval (0-shot, generative)",
       "description": "OpenAI HumanEval — 164 Python functions evaluated with pass@k.",
@@ -331,6 +432,26 @@
         "source": "simple-evals",
         "url": "https://github.com/openai/simple-evals/blob/ee3b0318d8d1d9d72755a4120879be65f7c07e9e/humaneval_eval.py",
         "notes": "Prompt style follows simple-evals HumanEval; QUERY_TEMPLATE is sieval-local."
+      },
+      "status": "stable"
+    },
+    {
+      "name": "ifbench_0shot_gen",
+      "display_name": "IFBench (0-shot, generative)",
+      "description": "IFBench — 300 prompts with 58 new out-of-domain verifiable constraints.",
+      "dataset": "ifbench",
+      "eval_mode": "gen",
+      "n_shot": 0,
+      "tags": [
+        "english",
+        "open-ended"
+      ],
+      "deps_group": "ifbench",
+      "model_type": "chat",
+      "reference_impl": {
+        "source": "allenai/IFBench",
+        "url": "https://github.com/allenai/IFBench/blob/1091c4c3de6c1f6ed12c012ed68f11ea450b0117/evaluation_lib.py",
+        "notes": "instructions + instructions_registry + instructions_util + evaluation_lib vendored verbatim from allenai/IFBench @ 1091c4c (only flat imports rewritten to package-relative). Headline = loose prompt-level accuracy (the metric the IFBench paper reports)."
       },
       "status": "stable"
     },
@@ -372,6 +493,27 @@
         "source": "livecodebench",
         "url": "https://github.com/LiveCodeBench/LiveCodeBench/blob/28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24/lcb_runner/prompts/code_generation.py",
         "notes": "Prompt templates and extract_code vendored from lcb_runner/{prompts,utils}."
+      },
+      "status": "stable"
+    },
+    {
+      "name": "longbench_v2_0shot_gen",
+      "display_name": "LongBench v2 (0-shot, generative)",
+      "description": "LongBench v2 — 503 long-context MCQ; accuracy by difficulty/length.",
+      "dataset": "longbench_v2",
+      "eval_mode": "gen",
+      "n_shot": 0,
+      "tags": [
+        "english",
+        "multiple-choice",
+        "long-context"
+      ],
+      "deps_group": "longbench_v2",
+      "model_type": "chat",
+      "reference_impl": {
+        "source": "THUDM/LongBench",
+        "url": "https://github.com/THUDM/LongBench/blob/2e00731f8d0bff23dc4325161044d0ed8af94c1e/pred.py",
+        "notes": "0-shot prompt (prompts/0shot.txt) + middle-out truncation + extract_answer vendored verbatim @ 2e00731. Headline = overall accuracy (result.py); broken down by difficulty and length."
       },
       "status": "stable"
     },
@@ -432,6 +574,26 @@
         "source": "opencompass",
         "url": "https://github.com/open-compass/opencompass/blob/568572803ab108eb0e2ae73b770d965b7de078de/opencompass/configs/datasets/mmlu_pro/mmlu_pro_0shot_cot_gen_08c1de.py",
         "notes": "QUERY_TEMPLATE / CHOICES adapted from opencompass 0-shot CoT config."
+      },
+      "status": "stable"
+    },
+    {
+      "name": "openbookqa_0shot_gen",
+      "display_name": "OpenBookQA (0-shot, generative)",
+      "description": "OpenBookQA — elementary-science MCQ, closed-book, generative.",
+      "dataset": "openbookqa",
+      "eval_mode": "gen",
+      "n_shot": 0,
+      "tags": [
+        "english",
+        "multiple-choice"
+      ],
+      "deps_group": null,
+      "model_type": "chat",
+      "reference_impl": {
+        "source": "simple-evals",
+        "url": "https://github.com/openai/simple-evals/blob/ee3b0318d8d1d9d72755a4120879be65f7c07e9e/common.py",
+        "notes": "Closed-book 0-shot generative MCQ; prompt template + letter extraction aligned with simple-evals MMLU. OpenBookQA's canonical protocol is loglikelihood-MC (lm-eval); generative chosen for thinking chat models and one consistent MCQ protocol across cells."
       },
       "status": "stable"
     },

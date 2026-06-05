@@ -13,8 +13,14 @@ from .drop_kshot_gen import (
 from .gpqa_diamond_0shot_gen import (
     GPQADiamondZeroShotGenTask,
 )
+from .gsm8k_8shot_gen import (
+    GSM8KFewShotGenTask,
+)
 from .human_eval_0shot_gen import (
     HumanEvalZeroShotGenTask,
+)
+from .ifbench_0shot_gen import (
+    IFBenchZeroShotGenTask,
 )
 from .ifeval_0shot_gen import (
     IFEvalZeroShotGenTask,
@@ -31,6 +37,9 @@ from .mmlu_0shot_gen import (
 from .mmlu_pro_0shot_gen import (
     MMLUProZeroShotGenTask,
 )
+from .openbookqa_0shot_gen import (
+    OpenBookQAZeroShotGenTask,
+)
 from .t_eval_before_calling_0shot_gen import (
     TEvalBeforeCallingZeroShotGenTask,
 )
@@ -40,11 +49,14 @@ __all__ = [
     "AIME2025ZeroShotGenTask",
     "DROPFewShotGenTask",
     "GPQADiamondZeroShotGenTask",
+    "GSM8KFewShotGenTask",
     "HumanEvalZeroShotGenTask",
+    "IFBenchZeroShotGenTask",
     "IFEvalZeroShotGenTask",
     "LiveCodeBenchCodeGenerationZeroShotGenTask",
     "MATH500ZeroShotGenTask",
     "MMLUProZeroShotGenTask",
     "MMLUZeroShotGenTask",
+    "OpenBookQAZeroShotGenTask",
     "TEvalBeforeCallingZeroShotGenTask",
 ]

@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# NLTK data downloaded at import-time by community/ifbench (runtime cache, not source)
+.nltk_data/
+
 # C extensions
 *.so
 

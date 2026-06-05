@@ -17,9 +17,17 @@ from .gpqa_diamond import (
     GPQADiamondDataset,
     GPQADiamondDatasetSample,
 )
+from .gsm8k import (
+    GSM8KDataset,
+    GSM8KDatasetSample,
+)
 from .human_eval import (
     HumanEvalDataset,
     HumanEvalDatasetSample,
+)
+from .ifbench import (
+    IFBenchDataset,
+    IFBenchDatasetSample,
 )
 from .ifeval import (
     IFEvalDataset,
@@ -41,6 +49,10 @@ from .mmlu_pro import (
     MMLUProDataset,
     MMLUProDatasetSample,
 )
+from .openbookqa import (
+    OpenBookQADataset,
+    OpenBookQADatasetSample,
+)
 from .t_eval import (
     TEvalBeforeCallingDataset,
     TEvalBeforeCallingDatasetSample,
@@ -55,8 +67,12 @@ __all__ = [
     "DROPDatasetSample",
     "GPQADiamondDataset",
     "GPQADiamondDatasetSample",
+    "GSM8KDataset",
+    "GSM8KDatasetSample",
     "HumanEvalDataset",
     "HumanEvalDatasetSample",
+    "IFBenchDataset",
+    "IFBenchDatasetSample",
     "IFEvalDataset",
     "IFEvalDatasetSample",
     "LiveCodeBenchDataset",
@@ -67,6 +83,8 @@ __all__ = [
     "MMLUDatasetSample",
     "MMLUProDataset",
     "MMLUProDatasetSample",
+    "OpenBookQADataset",
+    "OpenBookQADatasetSample",
     "TEvalBeforeCallingDataset",
     "TEvalBeforeCallingDatasetSample",
 ]
