@@ -7,6 +7,9 @@ from .aime_2024_0shot_gen import (
 from .aime_2025_0shot_gen import (
     AIME2025ZeroShotGenTask,
 )
+from .aime_2025_0shot_gen_rep import (
+    AIME2025RepeatZeroShotGenTask,
+)
 from .drop_kshot_gen import (
     DROPFewShotGenTask,
 )
@@ -19,6 +22,9 @@ from .gsm8k_8shot_gen import (
 from .human_eval_0shot_gen import (
     HumanEvalZeroShotGenTask,
 )
+from .human_eval_0shot_gen_rep import (
+    HumanEvalRepeatZeroShotGenTask,
+)
 from .ifbench_0shot_gen import (
     IFBenchZeroShotGenTask,
 )
@@ -27,6 +33,12 @@ from .ifeval_0shot_gen import (
 )
 from .livecodebench_code_generation_0shot_gen import (
     LiveCodeBenchCodeGenerationZeroShotGenTask,
+)
+from .livecodebench_code_generation_0shot_gen_rep import (
+    LiveCodeBenchCodeGenerationRepeatZeroShotGenTask,
+)
+from .longbench_v2_0shot_gen import (
+    LongBenchV2ZeroShotGenTask,
 )
 from .math_500_0shot_gen import (
     MATH500ZeroShotGenTask,
@@ -46,14 +58,18 @@ from .t_eval_before_calling_0shot_gen import (
 
 __all__ = [
     "AIME2024ZeroShotGenTask",
+    "AIME2025RepeatZeroShotGenTask",
     "AIME2025ZeroShotGenTask",
     "DROPFewShotGenTask",
     "GPQADiamondZeroShotGenTask",
     "GSM8KFewShotGenTask",
+    "HumanEvalRepeatZeroShotGenTask",
     "HumanEvalZeroShotGenTask",
     "IFBenchZeroShotGenTask",
     "IFEvalZeroShotGenTask",
+    "LiveCodeBenchCodeGenerationRepeatZeroShotGenTask",
     "LiveCodeBenchCodeGenerationZeroShotGenTask",
+    "LongBenchV2ZeroShotGenTask",
     "MATH500ZeroShotGenTask",
     "MMLUProZeroShotGenTask",
     "MMLUZeroShotGenTask",

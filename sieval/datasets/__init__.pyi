@@ -37,6 +37,10 @@ from .livecodebench_code_generation import (
     LiveCodeBenchDataset,
     LiveCodeBenchDatasetSample,
 )
+from .longbench_v2 import (
+    LongBenchV2Dataset,
+    LongBenchV2DatasetSample,
+)
 from .math_500 import (
     MATH500Dataset,
     MATH500DatasetSample,
@@ -77,6 +81,8 @@ __all__ = [
     "IFEvalDatasetSample",
     "LiveCodeBenchDataset",
     "LiveCodeBenchDatasetSample",
+    "LongBenchV2Dataset",
+    "LongBenchV2DatasetSample",
     "MATH500Dataset",
     "MATH500DatasetSample",
     "MMLUDataset",
